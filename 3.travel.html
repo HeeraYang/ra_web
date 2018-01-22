@@ -5,29 +5,34 @@
   <title>travel</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
+  <script>
+    function nightDayHandler(self){
+      var target = document.querySelector('body');
+      if(self.value === 'night'){
+        target.style.backgroundColor = 'black';
+        self.value = 'day';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while (i<alist.length){
+            alist[i].style.color = 'powderblue';
+            i = i + 1 ;}
+      } else {
+        target.style.backgroundColor = 'white';
+        self.value = 'night';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while (i<alist.length){
+            alist[i].style.color = 'blue';
+            i = i + 1 ;}
+      }
+    }
+  </script>
 </head>
 <body>
   <input type="button" value="night" onclick="
-    var target = document.querySelector('body');
-    if(this.value === 'night'){
-      target.style.backgroundColor = 'black';
-      this.value = 'day';
-
-      var alist = document.querySelectorAll('a');
-      var i = 0;
-      while (i<alist.length){
-          alist[i].style.color = 'powderblue';
-          i = i + 1 ;}
-    } else {
-      target.style.backgroundColor = 'white';
-      this.value = 'night';
-
-      var alist = document.querySelectorAll('a');
-      var i = 0;
-      while (i<alist.length){
-          alist[i].style.color = 'blue';
-          i = i + 1 ;}
-    }
+    nightDayHandler(this);
   ">
   <div id="titlewrapper" class="title">
     <h1><a href="index.html">RA</a></h1>

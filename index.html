@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <title>RA - Ready, Action!</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-  <input type="button" value="night" onclick="
+  <script>
+   function nightDayHandler(self){
     var target = document.querySelector('body');
-    if(this.value === 'night'){
+    if(self.value === 'night'){
       target.style.backgroundColor = 'black';
-      this.value = 'day';
+      self.value = 'day';
 
       var alist = document.querySelectorAll('a');
       var i = 0;
@@ -21,7 +18,7 @@
           i = i + 1 ;}
     } else {
       target.style.backgroundColor = 'white';
-      this.value = 'night';
+      self.value = 'night';
 
       var alist = document.querySelectorAll('a');
       var i = 0;
@@ -29,6 +26,13 @@
           alist[i].style.color = 'blue';
           i = i + 1 ;}
     }
+  }//nightDayHandler함수의 내용을 바꾸면 1억개의 사용처에서 개선되는 효과가 나온다
+  </script>
+</head>
+
+<body>
+  <input type="button" value="night" onclick="
+    nightDayHandler(this);
   ">
   <div id="titlewrapper" class="title">
       <h1><a href="index.html">RA</a></h1>
