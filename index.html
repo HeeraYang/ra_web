@@ -5,26 +5,32 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
   <script>
+   function linksSetColor(color){
+     var alist = document.querySelectorAll('a');
+     var i = 0;
+     while (i<alist.length){
+         alist[i].style.color = color;
+         i = i + 1 ;}
+   }
+   function BodySetColor(color){
+    document.querySelector('body').style.color = color;
+   }
+   function BodySetBacgroundColor(color){
+    document.querySelector('body').style.backgroundColor = color;
+   }
    function nightDayHandler(self){
     var target = document.querySelector('body');
     if(self.value === 'night'){
-      target.style.backgroundColor = 'black';
+      Body.setBacgroundColor('black');
+      Body.setColor('white');
       self.value = 'day';
+      links.setColor('powderblue');
 
-      var alist = document.querySelectorAll('a');
-      var i = 0;
-      while (i<alist.length){
-          alist[i].style.color = 'powderblue';
-          i = i + 1 ;}
     } else {
-      target.style.backgroundColor = 'white';
+      Body.setBacgroundColor('white');
+      Body.setColor('black');
       self.value = 'night';
-
-      var alist = document.querySelectorAll('a');
-      var i = 0;
-      while (i<alist.length){
-          alist[i].style.color = 'blue';
-          i = i + 1 ;}
+      links.setColor('blue');
     }
   }//nightDayHandler함수의 내용을 바꾸면 1억개의 사용처에서 개선되는 효과가 나온다
   </script>
@@ -43,13 +49,13 @@
       <a href="1.about.html">About</a> |
       <a href="2.works.html">Works</a> |
       <a href="3.travel.html">Travel</a> |
-      <a href="4.finantial.html">Financial</a>
+      <a href="4.favorite.html">Favorite</a>
   </div>
     <div id="article">
       <h2><img src="lee-campbell-242267.jpg"</h2>
   </div>
   <p>
-
+     hi
 
 
   </p>
