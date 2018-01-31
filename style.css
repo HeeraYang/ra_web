@@ -32,7 +32,6 @@ img{
     margin: 0;
     padding: none;
   }
-
   .title h2 {
     color: white;
     font-size: 1em;
@@ -40,7 +39,6 @@ img{
     font-style: oblique;
     margin: 0;
   }
-
   #titlewrapper {
     width: 1000px;
     margin: 0 auto;
@@ -48,7 +46,6 @@ img{
     padding-bottom: 20px;
     background-color: black;
   }
-
   #grid {
     border : 1px solid black;
     border-left: none;
@@ -66,16 +63,6 @@ img{
     padding-bottom: none;
     background-color: white;
   }
-  .word h2{
-    text-align: left;
-    font-size: 20px;
-    font-style : normal;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    color: black;
-
-  }
-
   @media(max-width: 800px) {
     #title {
       display: block;
